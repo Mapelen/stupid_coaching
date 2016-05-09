@@ -1,0 +1,17 @@
+<h1>Coaching#answer</h1>
+
+<h2>You ask: </h2>
+<%= params[:query] %>
+
+<h2>Coach's answer</h2>
+<% if params[:query].include?("?")%>
+    <h3>"Silly question, get dressed and go to work!"</h3>
+  <% elsif params[:query] == "I am going to work right now!"%>
+    <h3>puts "TEST"</h3>
+  <%else%>
+    <h3> I don't care, get dressed and go to work!</h3>
+  <%end%>
+
+
+<%= link_to "New question", ask_path %>
+
